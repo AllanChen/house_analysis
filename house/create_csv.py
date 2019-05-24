@@ -2,8 +2,10 @@ import json
 import csv
 import time
 import codecs
+import house.settings
+
 if __name__ == '__main__':
-    time_string = time.strftime("%Y%m%d", time.localtime())
+    time_string = house.settings.DATA_NAME
     txt_name = time_string + "_hours.txt"
     json_name = time_string + "_hours.json"
     csv_name = time_string + "_hours.csv"
@@ -18,7 +20,6 @@ if __name__ == '__main__':
     file = codecs.open(json_save_name, 'wb', 'utf-8')
     file.write(data)
 
-    
     with open(json_name, 'r',encoding='utf-8') as f:
         data_json = json.load(f)
         f.close()

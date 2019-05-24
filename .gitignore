@@ -127,3 +127,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/dataSources/49b35ef1-f0b4-4e14-8e12-a5699b7698d3.xml
+.idea/dataSources/880c62ca-f969-45ce-9bfa-970d286e7de9.xml
+.idea/dictionaries/allan.xml

@@ -8,12 +8,14 @@
 #     https://doc.scrapy.org/en/latest/topics/settings.html
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+import time
 
 BOT_NAME = 'house'
 
 SPIDER_MODULES = ['house.spiders']
 NEWSPIDER_MODULE = 'house.spiders'
 
+DATA_NAME = time.strftime("%Y%m%d_%H", time.localtime())
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'house (+http://www.yourdomain.com)'
