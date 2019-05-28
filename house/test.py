@@ -7,7 +7,6 @@ import json
 import house.settings
 
 engine = create_engine("mysql+pymysql://root:macbook@localhost:3306/spider", max_overflow=5)
-
 Base = declarative_base()
 time_string = time.strftime("%Y%m%d", time.localtime())
 
@@ -54,17 +53,7 @@ def insert_data(data_json):
 				# tag2 = item['tag']
 			)
 		)
-		
 	session.add_all(insert_data)
 	session.commit()
 
-# def read_json(json_name):
-# 	with open(json_name, 'r', encoding='utf-8') as f:
-# 		data_json = json.load(f)
-# 		f.close()
-# 	return data_json
-
-# if __name__ == '__main__':
-#     init_db()
-#     data = read_json("./data/20190520_hours.json")
-#     insert_data(data)
+init_db()
