@@ -68,7 +68,7 @@ ROBOTSTXT_OBEY = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
 #    'house.pipelines.HousePipeline': 300,
-   'house.pipelines.JsonWithEncodingLianjiapeline': 300
+   'house.pipelines.JsonWithEncodingHouseapeline': 300
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
