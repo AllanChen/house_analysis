@@ -47,7 +47,7 @@ class JsonWithEncodingLianjiapeline(object):
         time_string = house.settings.DATA_NAME
         file_name = time_string + "_hours.txt"
         self.file = codecs.open(file_name, 'wb', 'utf-8')
-        house.test.init_db()
+        #house.test.init_db()
 
     def process_item(self, item, spider):
         title_list = item['title']
@@ -89,7 +89,7 @@ class JsonWithEncodingLianjiapeline(object):
             data_json = json.load(f)
             f.close()
 
-        house.test.insert_data(data)
+        #house.test.insert_data(data)
 
     def spider_closed(self, spider):
         self.file.close()
