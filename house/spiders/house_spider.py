@@ -1,6 +1,7 @@
 import scrapy
-import json
-from scrapy import log,signals
+import simplejson as json
+import logging
+from scrapy import signals
 from house.items import HouseItem
 
 class HouseSpider(scrapy.Spider):
@@ -45,4 +46,3 @@ class HouseSpider(scrapy.Spider):
 
 
             
-

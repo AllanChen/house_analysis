@@ -8,7 +8,8 @@
 import scrapy
 import codecs
 import house.settings
-import house.house_model
+import simplejson as json
+# import house.house_model
 
 class HousePipeline(object):
     def process_item(self, item, spider):
@@ -20,7 +21,7 @@ class DataBaseWithEncodingHousepeline(object):
         time_string = house.settings.DATA_NAME
         file_name = time_string + "_hours.txt"
         self.file = codecs.open(file_name, 'wb', 'utf-8')
-        house.house_model.init_db()
+        # house.house_model.init_db()
 
     def process_item(self, item, spider):
         self.insert_house_data.clear()
@@ -35,7 +36,7 @@ class DataBaseWithEncodingHousepeline(object):
             insert_h.unitPrice = str(item['unitPrice'][i])
             self.insert_house_data.append(insert_h)
 
-        house.house_model.insert_data_many(self.insert_house_data)
+        # house.house_model.insert_data_many(self.insert_house_data)
         return item
 
     def spider_closed(self, spider):
@@ -89,7 +90,7 @@ class JsonWithEncodingLianjiapeline(object):
             data_json = json.load(f)
             f.close()
 
-        #house.test.insert_data(data)
+        # house.test.insert_data(data)
 
     def spider_closed(self, spider):
         self.file.close()

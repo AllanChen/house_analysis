@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 
 import house.settings
 
-engine = create_engine("mysql+pymysql://root:macbook@localhost:3306/spider", max_overflow=5)
+engine = create_engine("mysql+pymysql://allan:zPSsZYtmmjAJAcjR@localhost:3306/house", max_overflow=5)
 Base = declarative_base()
 
 class House(Base):

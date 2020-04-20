@@ -2,11 +2,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
-import json
+import simplejson as json
 import codecs
-import house.settings
 
-engine = create_engine("mysql+pymysql://root:zPSsZYtmmjAJAcjR@39.105.97.84:3306/house", max_overflow=5)
+engine = create_engine("mysql+pymysql://allan:zPSsZYtmmjAJAcjR@localhost:3306/house", max_overflow=5)
 Base = declarative_base()
 tb_name = "20190525_21"
 
